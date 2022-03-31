@@ -1,0 +1,124 @@
+/* Normalização */
+
+body,
+h2,
+h1,
+p {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Início CSS */
+
+@font-face {
+  font-family: barbara;
+  src: url("/arquivos/La\ Petite\ Robe.ttf");
+}
+
+body {
+  background: rgb(203, 221, 245);
+}
+/* trabalhando div nav 2 parte da aula*/
+
+p {
+  font-size: 1rem;
+}
+.menu {
+  width: 30%;
+  border: 1px solid goldenrod; /*none*/
+  margin: 10px auto;
+} /* colocando borda e largura e com a margem colocando no centro da tela*/
+.menu ul li {
+  list-style: none;
+} /* tirando a bolinha da lista*/
+
+.menu ul li a {
+  text-decoration: none;
+  color: #222222;
+  font-weight: 600;
+  font-size: 35px;
+  font-family: barbara;
+} /* tirando sublinhado*/
+.menu ul li a:hover {
+  color: goldenrod; /*ou text decoration:underline*/
+  font-weight: 600;
+} /* copia o anterior para fazer o hover e altera o text decoration e color*/
+
+.menu ul {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+.titulo {
+  font-family: barbara;
+  font-size: 60px;
+  text-align: center;
+  margin-top: 10px;
+}
+hr {
+  width: 60%;
+  height: 10px;
+  background: goldenrod;
+  border: none;
+}
+
+.polaroid {
+  background: white;
+  padding: 15px 15px 40px;
+  box-shadow: 5px 4px 4px rgba(58, 57, 57, 0.561);
+}
+
+.polaroid img {
+  width: 100%;
+  height: 290px;
+  object-fit: cover;
+}
+.pai {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin: 40px;
+  padding: 20px;
+}
+/* tablet*/
+@media (min-width: 830px) and (max-width: 1024px) {
+  .pai {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/*tablet 02*/
+@media (min-width: 640px) and (max-width: 830px) {
+  .pai {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .titulo {
+    font-size: 45px;
+  }
+  hr {
+    width: 80%;
+    height: 10px;
+  }
+}
+
+/*celular*/
+@media (max-width: 640px) {
+  .pai {
+    grid-template-columns: repeat(1, 1fr);
+    background: linear-gradient(
+      rgba(207, 172, 105, 0.609),
+      rgba(75, 4, 75, 0.609)
+    );
+  }
+
+  .titulo {
+    font-size: 40px;
+  }
+  hr {
+    height: 8px;
+    width: 80%;
+  }
+}
+/*adicionar o id="produtos " para se tornar destino*/
