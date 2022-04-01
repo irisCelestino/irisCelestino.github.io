@@ -58,8 +58,8 @@ p {
 }
 hr {
   width: 60%;
-  height: 10px;
-  background: goldenrod;
+  height: 20px;
+  background: rgb(247, 208, 227);
   border: none;
 }
 
